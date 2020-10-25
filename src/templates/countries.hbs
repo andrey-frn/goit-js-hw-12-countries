@@ -1,0 +1,22 @@
+{{#each this}}
+<li class="country-item">
+    <h1 class="title">{{name}}</h1>
+    <div class="card-block">
+        <div class="description-container">
+            <p> <span> Capital:</span> {{capital}} </p>
+            <p> <span>Population:</span> {{population}}</p>
+            <p> <span>Languages:</span>
+            <ul>
+                {{#each languages}}
+                <li> {{this.name}}
+                </li>
+                {{/each}}
+            </ul>
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="{{flag}}" alt="{{name}}" class="country__image" width="300" />
+        </div>
+    </div>
+</li>
+{{/each}}
